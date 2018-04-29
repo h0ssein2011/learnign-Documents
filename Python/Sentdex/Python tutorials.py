@@ -10,3 +10,5 @@ print('hello' + " " + str(5))
 
 print(float(8.8)+9)
 
+print('that\'s Ok man')
+

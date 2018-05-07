@@ -1,12 +1,19 @@
 # write an read tutorial
 
-root='C:/'
 
 text='this is a sample\n text'
 
-saveFile=open(root+'exampleWtite.txt','w')
+saveFile=open('exampleWtite.txt','w')
 
 saveFile.write(text)
 
 saveFile.close()
-print('please go to %s to see the file' % root)
+
+# append the file
+
+
+app_file=open('exampleWtite.txt','a')
+
+app_file.write(append_text)
+
+app_file.close()

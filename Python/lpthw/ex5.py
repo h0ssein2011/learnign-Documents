@@ -19,3 +19,4 @@ print(f"my teeth are always {my_teeth}")
 total=my_age + my_height + my_weight
 
 print(f" if I add my age,height,my weight it will result{total}")
+print(" ")

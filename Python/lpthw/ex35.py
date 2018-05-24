@@ -1,5 +1,6 @@
 # this is function tutorial
 
+"""in this code we want to play a game with 3 rooms that each one do sth for us.go aheed!"""
 from sys import exit
 
 def gold_room():

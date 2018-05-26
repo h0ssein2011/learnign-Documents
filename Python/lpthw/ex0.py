@@ -4,11 +4,10 @@ Created on Wed May  9 15:29:14 2018
 
 @author: Snapp
 """
+list1 = ['physics', 'Biology', 'chemistry', 'maths']
 
-#Execrice 0
+for i in range(len(list1)):
+    next_pone=list1.pop()
+    print(next_pone)
 
-fruits=['banana','orange','kiwi','melon','orange','kiwi']
 
-fruits.count('orange')
-
-fruits.index('orange')

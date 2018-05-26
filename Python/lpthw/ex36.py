@@ -5,7 +5,7 @@ gender=input("are you man or woman:")
 age=input("how old are you?")
 
 if age <=10:
-    print("you are so young be happy with your family!")
+    print("you are so young, happy with your family!")
 
 elif age >10 and age <=20:
     print("this is the best time to you learn basic life rules")

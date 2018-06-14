@@ -58,3 +58,45 @@ data=['ACME',50,90.1,(2012,11,12)]
 
 name,*_,(*_,year)=data
 name,year
+
+
+#keep last items in a list
+
+from collections import deque
+
+def search(lines,pattern ,history=5):
+    previous_lines=deque(maxlen=history)
+    for line in lines:
+        if pattern in line:
+            yield line,previous_lines
+        previous_lines.append(line)
+
+#example use a file
+#if __name__== __main__:
+with open('samplefile.txt') as f:
+     for line ,prevlines in search(f,'python',5):
+
+         for pline in prelines:
+             print(pline,end='')
+         print(line,end='')
+         print('-'*20)
+
+#deque application
+q=deque(max maxlen=3)
+q.append(1)
+q.append(2)
+q.append(3)
+print(q)
+q.append(4)
+print(q)
+
+
+#finding largest and smallest in a list
+import heapq
+
+nums=[-10,20,15,17,11,57,16,74,3]
+largest=heapq.nlargest(3,nums)
+lowest=heapq.n(3,nums)
+print(largest,lowest)
+
+#also in a list or collections

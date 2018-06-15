@@ -100,3 +100,56 @@ lowest=heapq.n(3,nums)
 print(largest,lowest)
 
 #also in a list or collections
+portfoilo=[{'name':'IBM','share':100,'price':200},
+           {'name':'Tesla','share':80,'price':150},
+           {'name':'Apple','share':90,'price':220},
+           {'name':'MS','share':60,'price':120},
+           {'name':'Google','share':98,'price':240},
+           {'name':'IIG','share':'20','price':10}
+           ]
+cheap=heapq.nsmallest(3,portfoilo,key=lambda s:s['price'])
+expensive=heapq.nlargest(3,portfoilo,key=lambda s:s['price'])
+print(cheap)
+print(expensive)
+
+nums_sorted=sorted(nums)
+nums_heap=heapq.heapify(nums)
+
+
+#multidict(dicnaries with mulitply valus)
+
+dits={'a':[1,4,8],'b':[1,7]}
+dicts
+
+#another option is defaultdict from collections
+from collections import defaultdict
+
+#2 type use list and use set
+d=defaultdict(list)
+d['a'].append(1)
+d['a'].append(3)
+d['b'].append(5)
+d['b'].append(7)
+d
+
+d=defaultdict(set)
+d['a'].add(7)
+d['a'].add(6)
+d['a'].add(5)
+d['b'].add(3)
+d['b'].add(4)
+d
+
+# keep dictionaries in order
+from collections import OrderedDict
+
+d=OrderedDict()
+
+d['foo']=1
+d['bar']=3
+d['jerk']=2
+
+d
+
+for key in d.keys():
+    print(key,d[key])

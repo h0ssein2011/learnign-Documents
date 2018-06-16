@@ -153,3 +153,92 @@ d
 
 for key in d.keys():
     print(key,d[key])
+
+
+# calculation with dictionaries
+prices={'Apple':23.6,
+        'IBM':33.4,
+        'IIG':14.1,
+        'FB':7.9
+}
+
+min_price=min(zip(prices.values(),prices.keys()))
+max_price=max(zip(prices.values(),prices.keys()))
+
+min_price,max_price
+
+
+#commonility in two dictionaries
+a={'x':1,'y':2,'z':3 }
+b={'w':10,'x':11,'y':2}
+
+a.keys() - b.keys()
+
+a.keys() & b.keys()
+a.values() & b.values()
+
+a.items() &  b.items()
+a.items() -  b.items()
+
+#remove certain keys
+c={key:a[key] for key in a.keys() -{'z','w'}}
+c
+
+# remove duplicate and remain order
+
+def dedupe(items):
+    seen=set()
+    for item in items:
+        if item not in seen:
+            yield item
+            seen.add(item)
+
+a=[1,52,1,9,1,5,10]
+list(dedupe(a))
+
+
+#naming a slice
+
+record = '....................100        513.25  ..........'
+cost=int(record[20:31]) * float(record[31:38])
+cost
+
+#2nd approach
+share=slice(20,32)
+price=slice(31,38)
+
+cost=int(record[slice]) * float(record[price])
+cost
+
+
+#find most common in a sequence
+words=['look', 'into', 'my', 'eyes', 'look', 'into', 'my', 'eyes',
+'the', 'eyes', 'the', 'eyes', 'the', 'eyes', 'not', 'around', 'the',
+'eyes', "don't", 'look', 'around', 'the', 'eyes', 'look', 'into',
+'my', 'eyes', "you're", 'under']
+
+from collections import Counter
+
+word_count=Counter(words)
+top3=word_count.most_common(3)
+top3
+
+morewords = ['why','are','you','not','looking','in','my','eyes']
+
+#add manually to word_count
+for word in morewords:
+    word_count[word] +=1
+word_count
+
+#another approach
+word_count.update(morewords)
+word_count
+
+#combine two
+a=Counter(words)
+b=Counter(morewords)
+
+c=a+b
+d=a-b
+
+c,d

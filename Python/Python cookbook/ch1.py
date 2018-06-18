@@ -240,5 +240,54 @@ b=Counter(morewords)
 
 c=a+b
 d=a-b
-
 c,d
+
+
+#sort dictionairs
+
+rows = [
+{'fname': 'Brian', 'lname': 'Jones', 'uid': 1003},
+{'fname': 'David', 'lname': 'Beazley', 'uid': 1002},
+{'fname': 'John', 'lname': 'Cleese', 'uid': 1001},
+{'fname': 'Big', 'lname': 'Jones', 'uid': 1004}
+]
+
+from operator import itemgetter
+rows_by_fname=sorted(rows, key=itemgetter('fname'))
+
+
+rows_by_uid=sorted(rows, key=itemgetter('uid'))
+rows_by_uid
+
+#another approach by lambda
+rows_by_fname=sorted(rows, key=lambda r:r['fname'])
+
+
+
+
+#group items based on a field
+from operator import itemgetter
+from itertools import groupby
+
+rows = [
+{'address': '5412 N CLARK', 'date': '07/01/2012'},
+{'address': '5148 N CLARK', 'date': '07/04/2012'},
+{'address': '5800 E 58TH', 'date': '07/02/2012'},
+{'address': '2122 N CLARK', 'date': '07/03/2012'},
+{'address': '5645 N RAVENSWOOD', 'date': '07/02/2012'},
+{'address': '1060 W ADDISON', 'date': '07/02/2012'},
+{'address': '4801 N BROADWAY', 'date': '07/01/2012'},
+{'address': '1039 W GRANVILLE', 'date': '07/04/2012'},
+]
+
+#first sorted
+
+
+rows.sort(key=itemgetter('date'))
+
+for date , items in groupby(rows ,key=itemgetter('date')):
+    print(date)
+
+    for i in items :
+        print(' ',i)
+        

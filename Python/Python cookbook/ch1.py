@@ -290,4 +290,55 @@ for date , items in groupby(rows ,key=itemgetter('date')):
 
     for i in items :
         print(' ',i)
-        
+
+
+#fliltering in a list
+#list comprehention
+my_vals=[7,8,-2,9,-8,7,-2,-44,42,89]
+pos_list=[n for n in my_vals if n >0]
+pos_list
+type(pos_list)
+
+#generator
+pos_gens=(n for n in my_vals if n >0)
+pos_gens
+type(pos_gens)
+
+
+
+#use filter
+values = ['1', '2', '-3', '-', '4', 'N/A', '5']
+
+def is_int(val):
+    try:
+        x=int(val)
+        return True
+    except ValueError:
+        return False
+
+int_values=list(filter(is_int , values))
+int_values
+
+my_solo=[n for n in values if is_int(n)]
+my_solo
+
+#select from two list
+addresses = [
+'5412 N CLARK',
+'5148 N CLARK',
+'5800 E 58TH',
+'2122 N CLARK'
+'5645 N RAVENSWOOD',
+'1060 W ADDISON',
+'4801 N BROADWAY',
+'1039 W GRANVILLE',
+]
+
+counts = [ 0, 3, 10, 4, 1, 7, 6, 1]
+
+from itertools import compress
+
+more5=[n>5 for n in counts]
+more5
+
+list(compress(addresses, more5))

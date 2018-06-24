@@ -342,3 +342,37 @@ more5=[n>5 for n in counts]
 more5
 
 list(compress(addresses, more5))
+
+# exctract subdict from another dictionary
+prices = {
+'ACME': 45.23,
+'AAPL': 612.78,
+'IBM': 205.55,
+'HPQ': 37.20,
+'FB': 10.75
+}
+
+#make a dict with some condition
+p1={key:value for key , value in prices.items() if value > 200}
+
+#make another dict of sth
+tech_names = { 'AAPL', 'IBM', 'HPQ', 'MSFT' }
+
+p2={key : value for key , value in prices.items() if key in tech_names}
+
+p1,p2
+
+#sol 2
+p3={key:prices[key] for key in prices.keys() & tech_names}
+p3
+
+#lets compare how fast each code
+import time
+
+start=time.time()
+p2={key : value for key , value in prices.items() if key in tech_names}
+end1=time.time()
+p3={key:prices[key] for key in prices.keys() & tech_names}
+end2=time.time()
+
+print((end2 - end1 / end1 - start)*100,'%')

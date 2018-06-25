@@ -376,3 +376,43 @@ p3={key:prices[key] for key in prices.keys() & tech_names}
 end2=time.time()
 
 print((end2 - end1 / end1 - start)*100,'%')
+
+
+#filter before apply function in dic or list
+nums=[4,5,6,7,9,60]
+#sum more_5
+more_5=sum(x for x in nums if x >5)
+
+
+portfolio = [
+{'name':'GOOG', 'shares': 50},
+{'name':'YHOO', 'shares': 75},
+{'name':'AOL', 'shares': 20}]
+
+#return min shares
+min_share=min(s['shares'] for s in portfolio)
+min_share
+
+min(portfolio, key=lambda s: s['shares'])
+
+#check in 2 dict
+a = {'x': 1, 'z': 3 }
+b = {'y': 2, 'z': 4 }
+
+from collections import ChainMap
+
+c=ChainMap(a,b)
+print(c['x'])
+print(c['z'])
+
+#alternative way
+merged=dict(a)
+merged.update(b)
+merged
+
+#but this is new dict so if we change the elemnet the first merged didnot change
+a['x']=42
+a['x'] == merged['x']
+
+#but not in ChainMap
+a['x'] == c['x'] 

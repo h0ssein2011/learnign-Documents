@@ -22,3 +22,26 @@ filename=os.listdir()
 filename
 
 [name for name in filename if name.endswith(('.py','.h'))]
+
+# match check
+
+filename='test.txt'
+
+filename[:4] == 'test'
+filename[-4:] == '.txt'
+
+#another way is use regular exprecsions
+import re
+url='http://python.org'
+
+re.match('http:https:ftp',url)
+
+from fnmatch import fnmatch,fnmatchcase
+fnmatch('foo.txt','*.txt')
+
+fnmatch('foo.txt','?oo.txt')
+
+fnmatch('Dat45.csv','Dat[0-9]*')
+
+names = ['Dat1.csv', 'Dat2.csv', 'config.ini', 'foo.py']
+[name for name in names if fnmatch(name,'Dat[0-9]*')]

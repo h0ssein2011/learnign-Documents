@@ -1,7 +1,7 @@
 if __name__ == '__main__':
     n=int(input())
     students=[]
-    students=[[input(), input()] for _ in range(n) ]
+    students=[[input(), float(input())] for _ in range(n) ]
 
 
 second_highest = sorted(list(set([marks for name, marks in students])))[1]

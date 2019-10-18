@@ -21,5 +21,3 @@ def get_middle(x):
     print(middle )
 
 get_middle(ls)
-
-print(123)

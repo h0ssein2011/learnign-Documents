@@ -1,0 +1,6 @@
+N_En=int(input())
+En_roll=set(map(int,input().split()))
+N_Fr=int(input())
+Fr_roll=set(map(int,input().split()))
+difs=En_roll.difference(Fr_roll)
+print(len(difs))

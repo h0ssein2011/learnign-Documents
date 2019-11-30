@@ -6,3 +6,6 @@ if __name__ == '__main__':
 
 second_highest = sorted(list(set([marks for name, marks in students])))[1]
 print('\n'.join([a for a,b in sorted(students) if b == second_highest]))
+
+for i  in range(11,101):
+    print('(',i,end='),')

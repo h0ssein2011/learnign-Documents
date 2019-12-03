@@ -2,14 +2,14 @@
 from pytube import Playlist
 from pytube import YouTube
 
-pl = Playlist("https://www.youtube.com/watch?v=2d6hh2Ryx_c&list=PLpQWTe-45nxL3bhyAJMEs90KF_gZmuqtm&index=3")
+pl = Playlist("https://www.youtube.com/watch?v=9BUiX1zOiGE&list=PL6284FEC8658EB472")
 #pl.download_all()
-pl.parse_links()
-# urls=pl.parse_links()
+#pl.parse_links()
+urls=pl.parse_links()
 # or if you want to download in a specific directory
 # pl.download_all('C:/Users/hossein.mortazavi/Desktop/Kaggle competition/',)
 part1='https://www.youtube.com'
-part3='&list=PLpQWTe-45nxL3bhyAJMEs90KF_gZmuqtm&index='
+part3='watch?v=9BUiX1zOiGE&list=PL6284FEC8658EB472&index='
 links=[]
 counter=1
 for link in urls:
@@ -19,14 +19,16 @@ for link in urls:
 
 counter=0
 count_error=0
-for link in links[]:
+for link in links[21:22]:
     try:
         counter+=1
         yt=YouTube(link)
-        YouTube(link).streams.first().download()
+        YouTube(link).streams.first().download('C:/Users/hossein.mortazavi/Desktop/dating advice')
         print('video {} downloaded'.format(counter))
     except:
         count_error+=1
         pass
 print('video {} downloaded'.format(counter))
 print('{} videos got error '.format(count_error))
+
+

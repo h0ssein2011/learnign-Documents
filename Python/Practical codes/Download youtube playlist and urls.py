@@ -21,18 +21,18 @@ for link in urls:
 
 counter=0
 count_error=0
+error_links=[]
 for link in links:
     try:
         counter+=1
         yt=YouTube(link)
-        outputfile=YouTube(link).streams.first().download('C:/Users/hossein.mortazavi/Desktop/Statquest')
-        file_name=os.name(outputfile)
-        print(file_name)
+        file_name=str(counter)+'_'+yt.streams.first().default_filename
+        yt.streams.first().download( filename=file_name)
+        
         print('video {} downloaded'.format(counter))
     except:
         count_error+=1
+        error_links.appdend(link)
         pass
 print('video {} downloaded'.format(counter))
 print('{} videos got error '.format(count_error))
-
-

@@ -32,7 +32,10 @@ for link in links:
         print('video {} downloaded'.format(counter))
     except:
         count_error+=1
-        error_links.appdend(link)
+        error_links.append(link)
         pass
 print('video {} downloaded'.format(counter))
 print('{} videos got error '.format(count_error))
+
+
+error_links

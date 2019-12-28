@@ -27,7 +27,7 @@ for link in links:
         counter+=1
         yt=YouTube(link)
         file_name=str(counter)+'_'+yt.streams.first().default_filename
-        yt.streams.first().download( filename=file_name)
+        # yt.streams.first().download( filename=file_name)
         
         print('video {} downloaded'.format(counter))
     except:
@@ -39,3 +39,7 @@ print('{} videos got error '.format(count_error))
 
 
 error_links
+
+with open('got_errors.txt' ,'w') as error_lks:
+    for url in error_links:
+        error_lks.write('%s\n' % url)

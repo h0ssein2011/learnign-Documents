@@ -1,4 +1,4 @@
-url_list=[line for line in open(r'C:\Users\hossein.mortazavi\Downloads\Parsget (3).txt')]
+url_list=[line for line in open('Parsget.txt')]
 
 import webbrowser
 

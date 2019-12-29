@@ -43,3 +43,6 @@ error_links
 with open('got_errors.txt' ,'w') as error_lks:
     for url in error_links:
         error_lks.write('%s\n' % url)
+
+
+#end cod

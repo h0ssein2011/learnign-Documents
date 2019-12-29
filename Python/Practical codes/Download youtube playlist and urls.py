@@ -45,4 +45,6 @@ with open('got_errors.txt' ,'w') as error_lks:
         error_lks.write('%s\n' % url)
 
 
-#end cod
+#end code
+
+###

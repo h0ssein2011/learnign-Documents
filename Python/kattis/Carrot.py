@@ -1,8 +1,6 @@
-a,b=input().split(" ")
-a=int(a)
-b=int(b)
+a, b = input().split()
 
-descs=input() for i in range(b) ]
+for i in range(int(a)):
+    name = input()
 print(b)
-
 

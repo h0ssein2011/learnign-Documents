@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Real world projects/IMDB-web-Scrapping/.idea/IMDB-web-Scrapping.iml" filepath="$PROJECT_DIR$/../Real world projects/IMDB-web-Scrapping/.idea/IMDB-web-Scrapping.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/learnign-code.iml" filepath="$PROJECT_DIR$/.idea/learnign-code.iml" />
     </modules>
   </component>

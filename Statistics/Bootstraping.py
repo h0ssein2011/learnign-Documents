@@ -13,10 +13,11 @@ for i in range(10000):
 avgs =sorted(avgs)
 print(avgs)
 
-lower_bound =len(avgs) / 100
+# creat confodence interval
 
-upprr_bound = len(avgs) / 100
-confidence_intervals = avgs[lower_bound , upprr_bound ]
+lower_bound =int(len(avgs) * 0.025)
+upper_bound = int(len(avgs) * 0.975)
+confidence_intervals = avgs[lower_bound:upper_bound ]
 print(confidence_intervals)
 
 

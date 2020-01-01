@@ -21,8 +21,3 @@ confidence_intervals = avgs[lower_bound:upper_bound ]
 print(confidence_intervals)
 
 
-
-
-
-
-

@@ -19,5 +19,3 @@ lower_bound =int(len(avgs) * 0.025)
 upper_bound = int(len(avgs) * 0.975)
 confidence_intervals = avgs[lower_bound:upper_bound ]
 print(confidence_intervals)
-
-

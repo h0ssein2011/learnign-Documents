@@ -5,6 +5,7 @@
     <orderEntry type="jdk" jdkName="Python 3.6" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="IMDB-web-Scrapping" />
+    <orderEntry type="module" module-name="kaggle-and-other-Online-competitions" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />
@@ -13,8 +14,5 @@
         <option value="$MODULE_DIR$/Python/lpthw/ex50/templates" />
       </list>
     </option>
-  </component>
-  <component name="TestRunnerService">
-    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
   </component>
 </module>

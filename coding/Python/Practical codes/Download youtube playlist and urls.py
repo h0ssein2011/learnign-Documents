@@ -12,6 +12,8 @@ urls=pl.parse_links()
 part1='https://www.youtube.com'
 part3='watch?v=7r1cE2im95U&list=PLpQWTe-45nxL3bhyAJMEs90KF_gZmuqtm&index='
 
+
+
 links=[]
 counter=1
 for link in urls:
@@ -31,7 +33,7 @@ for link in links:
         file_name = file_name[0:file_name.find('.')]
         yt.streams.first().download(filename=file_name)
         
-        # print('video {} downloaded'.format(counter))
+        print('video {} downloaded'.format(counter))
     except:
         count_error+=1
         error_links.append(link)
@@ -42,7 +44,7 @@ print('{} videos got error '.format(count_error))
 
 error_links
 
-with open('got_errors.txt' ,'w') as error_lks:
+with open('got_errors2.txt' ,'w') as error_lks:
     for url in error_links:
         error_lks.write('%s\n' % url)
 

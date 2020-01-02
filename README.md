@@ -1,2 +1,2 @@
-# this is a place that I do my coding excercise 
-thanks to github for great tools to share code
+# this is a place that I put my learning documents
+Currently add Coding ,Statistics documnets 

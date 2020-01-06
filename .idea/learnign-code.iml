@@ -6,6 +6,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="IMDB-web-Scrapping" />
     <orderEntry type="module" module-name="kaggle-and-other-Online-competitions" />
+    <orderEntry type="module" module-name="Data_analysis" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />

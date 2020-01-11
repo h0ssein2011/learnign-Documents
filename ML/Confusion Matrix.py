@@ -40,7 +40,11 @@ def confution_matrix(y,y_pred):
 
 print(confution_matrix(y_valid , pred_lr))
 
-#check with Sklearn
-from sklearn.metrics import confusion_matrix
+#check RF performance
+clf_rf=RandomForestClassifier()
+clf_rf.fit(X_train,y_train)
+pred_RF = clf_rf.predict(X_valid)
 
-print(confusion_matrix(y_valid,pred_lr)).
+print(confution_matrix(y_valid,pred_RF))
+
+#RF has better performance here as True positive and True negative are higher than LR

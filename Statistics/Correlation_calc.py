@@ -10,7 +10,7 @@ def cov_calc(x,y):
     avg_x=np.mean(x)
     avg_y =np.mean(y)
 
-    return (np.sum((x-avg_x) - (y-avg_y)) / (len(x) - 1))
+    return(np.sum((x-avg_x) - (y-avg_y)) / (len(x) - 1))
 
 def corr_calc(x,y):
 
@@ -20,6 +20,4 @@ def corr_calc(x,y):
 corr_calc(df['satisfaction_level'] ,df['last_evaluation'])
 
 # it seems the is a positive correlation between satisfacion level and evaluation but it is weak
-
-
 

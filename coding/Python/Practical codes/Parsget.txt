@@ -1,15 +1,14 @@
-http://de-2.parsget.com/download/ypyxekDE7w/20 - Visualizations _ How to Win a Data Science Competition_ Learn from Top Kagglers.mp4
-http://de-2.parsget.com/download/KPeQ9XxdPW/19 - Exploring Anonymized Data _ How to Win a Data Science Competition_ Learn from Top Kagglers.mp4
-http://de-2.parsget.com/download/Jp3dblzMPV/11 - Categorical and Ordinal Features _ How to Win a Data Science Competition.mp4
-http://de-2.parsget.com/download/37A05rKvNg/10 - Numeric Features _ How to Win a Data Science Competition_ Learn from Top Kagglers.mp4
-http://de-2.parsget.com/download/aNkdM2E37A/12 - Datetime and Coordinates _ How to Win a Data Science Competition_ Learn from Top Kagglers.mp4
-http://de-2.parsget.com/download/5PDomBEYpq/7 - Recap of ML Algorithms _ How to Win a Data Science Competition_ Learn from Top Kagglers.mp4
-http://de-2.parsget.com/download/opJ13ann72/16 - Final Project Overview _ How to Win a Data Science Competition_ Learn from Top Kagglers.mp4
-http://de-2.parsget.com/download/mpYo3ad5NX/1 - Introduction _ How to Win a Data Science Competition_ Learn from Top Kagglers.mp4
-http://de-2.parsget.com/download/mpWR3O6x7X/6 - Real World Applications vs Competitions _ How to Win a Data Science Competition.mp4
-http://de-2.parsget.com/download/JPmXVvyXpl/26 - Basic Data Leaks _ How to Win a Data Science Competition_ Learn from Top Kagglers.mp4
-http://de-2.parsget.com/download/QpZ9DZRv70/22 - Validation and Overfitting _ How to Win a Data Science Competition_ Learn from Top Kagglers.mp4
-http://de-2.parsget.com/download/XPolEx3xNw/35 - Classification Metrics Optimization I _ How to Win a Data Science Competition.mp4
-http://de-2.parsget.com/download/jNBgb0My7X/36 - Classification Metrics Optimization II _ How to Win a Data Science Competition.mp4
-http://de-2.parsget.com/download/zpL19RJMPQ/44 - KazAnovas Competition Pipeline Part 1 _ How to Win a Data Science Competition.mp4
-http://de-2.parsget.com/download/07KkQ5DR7d/53 - Stacking _ How to Win a Data Science Competition_ Learn from Top Kagglers.mp4
+http://de-2.parsget.com/download/5PDomVYkpq/StatQuickie_ Thresholds for Significance.mp4
+http://de-2.parsget.com/download/opJ13VXq72/StatQuest_ Boxplots_ Clearly Explained.mp4
+http://de-2.parsget.com/download/mpYo3vQJNX/StatQuest_ Odds and Log(Odds)_ Clearly Explained___.mp4
+http://de-2.parsget.com/download/Jp0gmVwn7V/StatQuest_ Logs (logarithms)_ clearly explained.mp4
+http://de-2.parsget.com/download/mpWR32KA7X/Bar Charts Are Better than Pie Charts.mp4
+http://de-2.parsget.com/download/BN4MbVEe7J/StatQuest_ Quantile Normalization.mp4
+http://de-2.parsget.com/download/mNqmq6OQN2/StatQuest_ One or Two Tailed P-Values.mp4
+http://de-2.parsget.com/download/QpZ9DLEd70/StatQuest_ The standard error.mp4
+http://de-2.parsget.com/download/8P6xDVZV71/StatQuest_ Technical and Biological Replicates.mp4
+http://de-2.parsget.com/download/jNBgbVD47X/StatQuest_ Maximum Likelihood_ clearly explained___.mp4
+http://de-2.parsget.com/download/VPd49j33Pg/StatQuest_ Quantiles and Percentiles_ Clearly Explained___.mp4
+http://de-2.parsget.com/download/ypzz5RxJpq/StatQuickie_ Standard Deviation vs Standard Error.mp4
+http://de-2.parsget.com/download/L7Xk3oraNa/StatQuest_ Confidence Intervals.mp4
+http://de-2.parsget.com/download/57O8BdRVpv/The Binomial Distribution and Test_ Clearly Explained___.mp4

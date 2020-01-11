@@ -29,13 +29,18 @@ clf.fit(X_train ,y_train)
 pred_lr=clf.predict(X_valid)
 print(pred_lr)
 
-def confution_matrix(y_pred,y):
-    true_positive = np.sum(y == 1 and y==y_pred)
-    false_positive = np.sum(y == 1 and y!=y_pred)
+def confution_matrix(y,y_pred):
+    true_positive = np.sum((y == 1) & (y==y_pred))
+    false_positive = np.sum((y == 1) & (y!=y_pred))
 
-    true_negative = np.sum(y == 0 and y==y_pred)
-    false_nagative =np.sum(y == 0 and y!=y_pred)
+    true_negative = np.sum((y == 0) & (y==y_pred))
+    false_nagative =np.sum((y == 0) & ( y!=y_pred))
 
-    return True_positive ,false_positive ,true_negative,false_nagative
+    return true_positive ,false_positive ,true_negative,false_nagative
 
-print(confution_matrix(pred_lr,y_valid))
+print(confution_matrix(y_valid , pred_lr))
+
+#check with Sklearn
+from sklearn.metrics import confusion_matrix
+
+print(confusion_matrix(y_valid,pred_lr))

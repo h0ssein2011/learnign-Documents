@@ -43,4 +43,4 @@ print(confution_matrix(y_valid , pred_lr))
 #check with Sklearn
 from sklearn.metrics import confusion_matrix
 
-print(confusion_matrix(y_valid,pred_lr))
+print(confusion_matrix(y_valid,pred_lr)).

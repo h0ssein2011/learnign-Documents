@@ -12,3 +12,5 @@ for i in range(10000):
 print(avgs)
 print('standard error is :{}'.format(np.std(avgs)))
 
+#
+

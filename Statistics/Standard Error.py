@@ -10,5 +10,5 @@ for i in range(10000):
     avgs.append(np.mean(choices(pop , k= n)))
 
 print(avgs)
-print('standard error is :'.format(np.std(avgs)))
+print('standard error is :{}'.format(np.std(avgs)))
 

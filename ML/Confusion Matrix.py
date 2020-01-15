@@ -12,6 +12,7 @@ print(df.shape)
 
 print(df.info())
 
+
 #for simplicity neglect object vars
 object_vars = [col for col in df.columns if df[col].dtype == 'object']
 

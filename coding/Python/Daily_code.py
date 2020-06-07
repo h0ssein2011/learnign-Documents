@@ -31,10 +31,15 @@ def cross_val(df,cv=10):
 
 
 
+# introduce new way of learing code by doing 
+# so pulblicy commitment to do daily code every day in python
+
+#D1
+
+
 game =[[0,0,0,0],[0,0,0,0,0],[0,0,0,0]]
 
 for row in game:
     print(row) 
-
 
 

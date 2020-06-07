@@ -1,7 +1,7 @@
 
 import os
 # change the dicnaries
-os.chdir('/media/hossein/0881-8560/Sq_st/')
+os.chdir('/media/hossein/0881-8560/New_fils/')
 #get all filenames and rename based on the this
 
 for file in os.listdir():
@@ -15,7 +15,7 @@ for file in os.listdir():
     # # new_name=src+'_'+file[:f.name.find('(')]+extention
     # new_name=src + extention
     # #print(new_name)
-    new_name=f.name.replace('%29','_')
+    new_name=f.name.replace('(1)',' ')
     os.rename(file,new_name)
     f.close()
     print(f.name)

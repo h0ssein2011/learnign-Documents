@@ -31,10 +31,6 @@ def cross_val(df,cv=10):
 
 
 
-game =[[0,0,0,0],[0,0,0,0,0],[0,0,0,0]]
-
-for row in game:
-    print(row) 
-
+# day_2
 
 

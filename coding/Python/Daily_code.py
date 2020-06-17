@@ -37,9 +37,16 @@ def cross_val(df,cv=10):
 #D1
 
 
-game =[[0,0,0,0],[0,0,0,0,0],[0,0,0,0]]
+game =[[0,0,0,0],
+       [0,0,0,0],
+       [0,0,0,0]]
+def game_board():
+    print('a , b ,c ')
+    for count , row in enumerate(game):
+        print(count ,row) 
 
-for row in game:
-    print(row) 
+game_board()
 
+game[0][1] = 2
+game_board()
 

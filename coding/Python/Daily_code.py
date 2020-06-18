@@ -50,3 +50,56 @@ game_board()
 game[0][1] = 2
 game_board()
 
+# Global vs local
+x = 1
+def test():
+    x = 2
+test()
+print(x)
+
+
+x = 1
+def test():
+    global x
+    x = 2
+test()
+print(x)
+
+
+x = [1]
+def test():
+    x = [2]
+test()
+print(x)
+
+
+x = [1]
+def test():
+    global x
+    x = [2]
+test()
+print(x)
+
+
+x = [1]
+def test():
+    x[0] = 2
+test()
+print(x)
+
+
+game =[[0,0,0,0],
+       [0,0,0,0],
+       [0,0,0,0]]
+
+
+def game_board(game_map , player=0,row=0,column=0 , just_display=False):
+    if not just_display:
+        game_map[row][column] = player
+    for count , row in enumerate(game_map):
+        print(count, row)
+    return game_map
+
+game_board(game,player=1)
+
+

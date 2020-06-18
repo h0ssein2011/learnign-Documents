@@ -3,14 +3,14 @@ from pytube import Playlist
 from pytube import YouTube
 import os
 
-pl = Playlist("https://www.youtube.com/playlist?list=PL2-dafEMk2A7mu0bSksCGMJEmeddU_H4D")
+pl = Playlist("https://www.youtube.com/watch?v=nLw1RNvfElg&list=PLQVvvaa0QuDfSfqQuee6K8opKtZsh7sA9")
 #pl.download_all()
 #pl.parse_links()
 urls=pl.parse_links()
 # or if you want to download in a specific directory
 # pl.download_all('C:/Users/hossein.mortazavi/Desktop/Kaggle competition/',)
 part1='https://www.youtube.com/'
-part3='watch?v=xRJCOz3AfYY&list=PL2-dafEMk2A7mu0bSksCGMJEmeddU_H4D&index='
+part3='watch?v=nLw1RNvfElg&list=PLQVvvaa0QuDfSfqQuee6K8opKtZsh7sA9&index='
 
 
 links=[]
@@ -46,4 +46,5 @@ print('{} videos got error '.format(count_error))
 with open('got_errors2.txt' ,'w') as error_lks:
     for url in error_links:
         error_lks.write('%s\n' % url)
+
 

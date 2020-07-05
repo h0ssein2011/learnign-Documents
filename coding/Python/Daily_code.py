@@ -88,9 +88,28 @@ test()
 print(x)
 
 
-game =[[0,0,0,0],
-       [0,0,0,0],
-       [0,0,0,0]]
+game =[[1,2,0],
+       [0,1,0],
+       [2,0,3]]
+
+diags=[]
+for ix in range(len(game)):
+    diags.append(game[ix][ix])
+print(diags)
+
+diags=[]
+for col , row in enumerate(reversed(range(len(game)))):
+    diags.append(game[row][col])
+
+print(diags)
+
+
+
+
+
+for ix in range(len(game)):
+    print(game[ix][ix])
+
 
 
 def game_board(game_map , player=0,row=0,column=0 , just_display=False):
@@ -102,4 +121,8 @@ def game_board(game_map , player=0,row=0,column=0 , just_display=False):
 
 game_board(game,player=1)
 
+import pandas as pd
+df=pd.read_csv('/home/hossein/Desktop/app_version.csv')
+veriosn=df['cr.os_version'].unique()
+print(sum([1 for x in veriosn if len(x)<6 ]))
 

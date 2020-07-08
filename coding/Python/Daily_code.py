@@ -100,15 +100,7 @@ print(diags)
 diags=[]
 for col , row in enumerate(reversed(range(len(game)))):
     diags.append(game[row][col])
-
 print(diags)
-
-
-
-
-
-for ix in range(len(game)):
-    print(game[ix][ix])
 
 
 
@@ -121,8 +113,23 @@ def game_board(game_map , player=0,row=0,column=0 , just_display=False):
 
 game_board(game,player=1)
 
-import pandas as pd
-df=pd.read_csv('/home/hossein/Desktop/app_version.csv')
-veriosn=df['cr.os_version'].unique()
-print(sum([1 for x in veriosn if len(x)<6 ]))
+
+
+
+def Poki_game(l):
+    played =[]
+    num_shots = len(l)-1
+    for i in range(num_shots):
+        shot = int(input('select a Poki'))
+        if shot in played or shot not in l:
+            print('You lost!....')
+            break
+        else:
+            played.append(shot)
+
+    if len(played)+1 == len(l):
+        print('you won')
+
+Poki_game([1,5,6,8,9])
+
 

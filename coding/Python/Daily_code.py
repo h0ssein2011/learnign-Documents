@@ -116,34 +116,4 @@ game_board(game,player=1)
 
 
 
-def Poki_game(l):
-    played =[]
-    num_shots = len(l)-1
-    for i in range(num_shots):
-        shot = int(input('select a Poki'))
-        if shot in played or shot not in l:
-            print('You lost!....')
-            break
-        else:
-            played.append(shot)
-
-    if len(played)+1 == len(l):
-        print('you won')
-
-Poki_game([1,5,6,8,9])
-
-import random
-def Memory_Match(num_games=5):
-    ls= random.sample(range(0,100), num_games)
-    score=0
-    
-    for i in range(num_games):
-        init=random.choice(ls)
-        print(init)
-        last_num=int(input('what was the last number? '))
-        if last_num == init:
-            score+=1
-    print('your score is {} out of {}'.format(score,num_games)) 
-
-Memory_Match(5)
 

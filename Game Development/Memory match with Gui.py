@@ -70,3 +70,30 @@ lbl_result.grid(row=0,column=2 ,padx=10)
 window.mainloop()
 
 
+
+
+from tkinter import *
+
+from PIL import Image, ImageTk
+
+class Window(Frame):
+    def __init__(self, master=None):
+        Frame.__init__(self, master)
+        self.master = master
+        self.pack(fill=BOTH, expand=1)
+        
+        load = Image.open("./Pics/1.png")
+        render = ImageTk.PhotoImage(load)
+        img = Label(self, image=render)
+        img.image = render
+        img.place(x=0, y=0)
+    def load_image(self):
+        
+        
+root = Tk()
+app = Window(root)
+root.wm_title("")
+root.geometry("400x320")
+root.mainloop()
+
+

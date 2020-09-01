@@ -41,11 +41,12 @@ print(h * rate)
 years = int(input())
 print( 'you lived for:', years * 365 * 24 * 60 * 60,'seconds')
 
+first = 1
+second = 2
 for i in range(5):
     for j in range(5):
-        if i == 0 or j==1:
-            print(1)
-        else :
-            print(i*j)
+
+print('1 '*5)
+print(' '.join(str(i) for i in [1,2]))
 
         

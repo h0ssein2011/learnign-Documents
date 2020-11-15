@@ -102,3 +102,12 @@ ENV/
 
 # mac osx
 .DS_Store
+
+# input data
+Input/
+
+
+# data files
+*.csv
+*.h5
+

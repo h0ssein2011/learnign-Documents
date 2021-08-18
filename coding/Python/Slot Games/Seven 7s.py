@@ -3,7 +3,7 @@ credits = 20
 bet_amount = 0.20
 shapes = ['7','Bar','7-Bar','Bar-7']
 win = 0
-spins = 10
+spins = 100
 
 while credits > 0:
     chance = ['7']
@@ -18,22 +18,26 @@ while credits > 0:
             if chance.count('7') == 3 :
                 credits += 2.0
                 chance.append(random.choice(shapes))
+            else :
+                chance = ['7']
 
                 if chance.count('7') == 4 :
                     credits += 5
                     chance.append(random.choice(shapes))
+                else :
+                    chance = ['7']
 
                     if chance.count('7') == 5 :
                         credits += 15 
                         chance.append(random.choice(shapes))
+                    else :
+                        chance = ['7']
 
                         if chance.count('7') == 6 :
                             credits += 50
-                            pass
+                            chance = ['7']
         else :
             chance = ['7']
-        print(chance)
-        print(credits)
     print('your final credit: ',credits)
         
         

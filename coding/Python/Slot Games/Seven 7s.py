@@ -42,7 +42,7 @@
 #         chance = ['7']
 #     print('your final credit: ',credits)
         
-
+#https://www.paf.com/en/slots/demo/quickfire?game=seven7sDesktop
 import random        
 class Seven7s():
     def __init__(self,bet_amount=0.1,balance=100,win_amount = 0,win_limit = 100):

@@ -25,16 +25,16 @@ class Deck():
         for suit in suits :
             for rank in ranks:
                 self.All_cards.append(Card(suit,rank))
-    def suffle(self):
+    def shuffle(self):
         random.shuffle(self.All_cards)
 
     def deal_one(self):
         self.All_cards.pop()
 
-This_Deck = Deck()
-This_Deck.suffle()
-for card in This_Deck.All_cards:
-    print(card)
+# This_Deck = Deck()
+# This_Deck.shuffle()
+# for card in This_Deck.All_cards:
+#     print(card)
 
 # Player class
 class Player():
@@ -55,9 +55,61 @@ class Player():
     def __str__(self):
         return f'Player {self.name} has {len(self.All_cards)} cards'
     
-Ali = Player('Ali')
-print(Ali)
+# Ali = Player('Ali')
+# print(Ali)
+# king_Ace = Card('Diamonds','King')
+# Two_clubs = Card('Clubs','Two')
+# Ali.add_card([king_Ace,Two_clubs])
+# print(Ali)
+
+# lets begin the game
+this_Deck = Deck()
+this_Deck.shuffle()
+
+Player_1 = Player('Ali')
+Player_2 = Player('Reza')
+
+for i in range(26):
+    Player_1.add_card(this_Deck.deal_one())
+    Player_2.add_card(this_Deck.deal_one())
+print(Player_1)
+print(Player_2)
+
+Game_on = True 
+while Game_on:
+    if len(Player_1.All_cards) == 0:
+        print(f'{Player_1.name} is lost and {Player_2.name} wone the game')
+        Game_on = False
+        break  
+
+    if len(Player_2.All_cards) == 0:
+        print(f'{Player_2.name} is lost and {Player_1.name} wone the game')
+        Game_on = False
+        break
+
+
+    at_war = True
+    while at_war:
+        Player_1_cards = []
+        Player_1_cards.append(Player_1.remove())
+        print(Player_1.remove())
+
+        Player_2_cards = []
+        Player_2_cards.append(Player_2.remove()) 
+        print(Player_2_cards)
+
+
+        if Player_1_cards[-1].value > Player_2_cards[-1].value :
+            Player_1.add_card(Player_1_cards)
+            Player_1.add_card(Player_2_cards)
+            at_war = False
+        
+        if Player_1_cards[-1].value < Player_2_cards[-1].value :
+            Player_2.add_card(Player_1_cards)
+            Player_2.add_card(Player_2_cards)
+            at_war = False
+    
+        
 
 
 
-# setup

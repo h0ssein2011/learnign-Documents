@@ -25,6 +25,7 @@ class Deck():
         for suit in suits :
             for rank in ranks:
                 self.All_cards.append(Card(suit,rank))
+        
     def shuffle(self):
         random.shuffle(self.All_cards)
 
@@ -57,7 +58,7 @@ class Player():
     
 # Ali = Player('Ali')
 # print(Ali)
-# king_Ace = Card('Diamonds','King')
+# king_Ace = Card('DAamonds','King')
 # Two_clubs = Card('Clubs','Two')
 # Ali.add_card([king_Ace,Two_clubs])
 # print(Ali)
@@ -65,7 +66,6 @@ class Player():
 # lets begin the game
 this_Deck = Deck()
 this_Deck.shuffle()
-
 Player_1 = Player('Ali')
 Player_2 = Player('Reza')
 
@@ -73,7 +73,9 @@ for i in range(26):
     Player_1.add_card(this_Deck.deal_one())
     Player_2.add_card(this_Deck.deal_one())
 print(Player_1)
-print(Player_2)
+print(Player_2.All_cards)
+print(Player_1.remove())
+
 
 Game_on = True 
 while Game_on:
@@ -110,6 +112,7 @@ while Game_on:
             at_war = False
     
         
+
 
 
 

@@ -14,10 +14,6 @@ class Card():
     def __str__(self):
         return self.rank + ' of ' + self.suit
     
-my_card = Card('Diamond','Eight')
-print(my_card)
-
-
 # deck class
 class Deck():
     def __init__(self):
@@ -30,12 +26,7 @@ class Deck():
         random.shuffle(self.All_cards)
 
     def deal_one(self):
-        self.All_cards.pop()
-
-# This_Deck = Deck()
-# This_Deck.shuffle()
-# for card in This_Deck.All_cards:
-#     print(card)
+        return self.All_cards.pop()
 
 # Player class
 class Player():
@@ -66,16 +57,13 @@ class Player():
 # lets begin the game
 this_Deck = Deck()
 this_Deck.shuffle()
+
 Player_1 = Player('Ali')
 Player_2 = Player('Reza')
 
 for i in range(26):
     Player_1.add_card(this_Deck.deal_one())
     Player_2.add_card(this_Deck.deal_one())
-print(Player_1)
-print(Player_2.All_cards)
-print(Player_1.remove())
-
 
 Game_on = True 
 while Game_on:
@@ -94,19 +82,16 @@ while Game_on:
     while at_war:
         Player_1_cards = []
         Player_1_cards.append(Player_1.remove())
-        print(Player_1.remove())
 
         Player_2_cards = []
         Player_2_cards.append(Player_2.remove()) 
-        print(Player_2_cards)
-
 
         if Player_1_cards[-1].value > Player_2_cards[-1].value :
             Player_1.add_card(Player_1_cards)
             Player_1.add_card(Player_2_cards)
             at_war = False
         
-        if Player_1_cards[-1].value < Player_2_cards[-1].value :
+        elif Player_1_cards[-1].value < Player_2_cards[-1].value :
             Player_2.add_card(Player_1_cards)
             Player_2.add_card(Player_2_cards)
             at_war = False

@@ -23,7 +23,7 @@ class Deck():
                 self.All_cards.append(Card(suit,rank))
         
     def shuffle(self):
-        random.shuffle(self.All_cards)
+        return random.shuffle(self.All_cards)
 
     def deal_one(self):
         return self.All_cards.pop()
@@ -47,12 +47,6 @@ class Player():
     def __str__(self):
         return f'Player {self.name} has {len(self.All_cards)} cards'
     
-# Ali = Player('Ali')
-# print(Ali)
-# king_Ace = Card('DAamonds','King')
-# Two_clubs = Card('Clubs','Two')
-# Ali.add_card([king_Ace,Two_clubs])
-# print(Ali)
 
 # lets begin the game
 this_Deck = Deck()
@@ -66,6 +60,7 @@ for i in range(26):
     Player_2.add_card(this_Deck.deal_one())
 
 Game_on = True 
+counter = 0
 while Game_on:
     if len(Player_1.All_cards) == 0:
         print(f'{Player_1.name} is lost and {Player_2.name} wone the game')
@@ -79,7 +74,10 @@ while Game_on:
 
 
     at_war = True
+    counter = 0
     while at_war:
+        counter =+ 1
+        print(counter)
         Player_1_cards = []
         Player_1_cards.append(Player_1.remove())
 
@@ -90,12 +88,19 @@ while Game_on:
             Player_1.add_card(Player_1_cards)
             Player_1.add_card(Player_2_cards)
             at_war = False
+            pass
         
         elif Player_1_cards[-1].value < Player_2_cards[-1].value :
             Player_2.add_card(Player_1_cards)
             Player_2.add_card(Player_2_cards)
             at_war = False
-    
+            pass
+        
+        
+        if counter == 5:
+            at_war = False
+            print(f'Player {Player_1.name} has {len(Player_1.All_cards)} cards')
+            print(f'Player {Player_2.name} has {len(Player_2.All_cards)} cards')
         
 
 

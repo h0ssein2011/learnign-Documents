@@ -62,6 +62,8 @@ for i in range(26):
 Game_on = True 
 counter = 0
 while Game_on:
+    counter += 1
+    print(f'round numeber {counter}')
     if len(Player_1.All_cards) == 0:
         print(f'{Player_1.name} is lost and {Player_2.name} wone the game')
         Game_on = False
@@ -72,36 +74,34 @@ while Game_on:
         Game_on = False
         break
 
+    Player_1_cards = []
+    Player_1_cards.append(Player_1.remove())
 
+    Player_2_cards = []
+    Player_2_cards.append(Player_2.remove()) 
     at_war = True
-    counter = 0
+    
     while at_war:
-        counter =+ 1
-        print(counter)
-        Player_1_cards = []
-        Player_1_cards.append(Player_1.remove())
-
-        Player_2_cards = []
-        Player_2_cards.append(Player_2.remove()) 
 
         if Player_1_cards[-1].value > Player_2_cards[-1].value :
             Player_1.add_card(Player_1_cards)
             Player_1.add_card(Player_2_cards)
             at_war = False
-            pass
         
         elif Player_1_cards[-1].value < Player_2_cards[-1].value :
             Player_2.add_card(Player_1_cards)
             Player_2.add_card(Player_2_cards)
             at_war = False
-            pass
         
         
-        if counter == 5:
-            at_war = False
-            print(f'Player {Player_1.name} has {len(Player_1.All_cards)} cards')
-            print(f'Player {Player_2.name} has {len(Player_2.All_cards)} cards')
-        
+        else:
+            print('At War!')
+            if counter > 5000: #or len(Player_1.All_cards) < 10 or len(Player_2.All_cards) < 10 :
+                Game_on = False
+                at_war = False
+                print(f'Player {Player_1.name} has {len(Player_1.All_cards)} cards')
+                print(f'Player {Player_2.name} has {len(Player_2.All_cards)} cards')
+                break
 
 
 

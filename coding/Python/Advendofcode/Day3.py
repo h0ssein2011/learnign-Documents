@@ -23,9 +23,10 @@ epsilon_rate = epsilon_rate.replace('+','0')
 
 print(gamma_rate)
 print(epsilon_rate)
-gamma_rate_decimal = sum([pow(2,i) for i,p in enumerate(gamma_rate[::-1])])
-epsilon_rate_decimal = sum([pow(2,i) for i,p in enumerate(epsilon_rate[::-1])])
+gamma_rate_decimal = sum([int(p)*pow(2,i) for i,p in enumerate(gamma_rate[::-1])])
+epsilon_rate_decimal = sum([int(p)*pow(2,i) for i,p in enumerate(epsilon_rate[::-1])])
 
 print(gamma_rate_decimal)
 print(epsilon_rate_decimal)
 print(gamma_rate_decimal*epsilon_rate_decimal)
+

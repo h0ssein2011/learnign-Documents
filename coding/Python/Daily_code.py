@@ -1,7 +1,8 @@
 # daily_code
 # day1
 # cross_validation
-rom sklearn.linear_model import LogisticRegression
+rom sklearn.linear_model from turtle import bye
+import LogisticRegression
 import  pandas as pd
 from sklearn.metrics import  accuracy_score
 
@@ -114,6 +115,49 @@ def game_board(game_map , player=0,row=0,column=0 , just_display=False):
 game_board(game,player=1)
 
 
+#Call stack and recursion
+
+def greet(name):
+    print("hello ," + name)
+
+    greet2()
+
+    print('this is a test yet')
+    bye()
+
+def greet2():
+    print('Hello again from ' )  
+
+def bye():
+    print('Bye')
+
+greet('John') 
 
 
 
+import numpy as np
+def sort(l):
+    new_l = []
+    for i in range(len(l)):
+        new_l.append(min(l))
+        l.remove(min(l))
+
+    return new_l
+def selection_sort(l):
+    n = len(l)
+    
+    for i in range(n-1):
+        l[i] = min(l)
+        print(l[i])
+        l = l[i+1:]
+
+    return l
+
+
+        
+    
+
+test_list = list(np.random.randint(0,100,size=10))
+print(test_list)
+print(sort(test_list))
+print(selection_sort(test_list))

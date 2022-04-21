@@ -116,4 +116,19 @@ game_board(game,player=1)
 
 
 
+class lift:
+    Status ='undefined'
+    def __init__(self,f,s):
+        self.floor = f
+        self.status = s
 
+    def open(self):
+        self.status = 'open'
+
+    def close(self):
+        self.status = 'close'
+    
+
+
+lift1 = lift(1,'close')
+print(lift1.Status)

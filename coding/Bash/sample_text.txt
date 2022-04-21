@@ -1,0 +1,3 @@
+I believe that creating reusable ?? tools makes you a more efficient and productive data scientist in the long run. 
+You will gradually build up your own data science toolbox from which you can ?? existing tools and apply it to ?? you have encountered previously. 
+It requires practice to recognize the ?? to turn a one-liner or existing code into a ?? tool.

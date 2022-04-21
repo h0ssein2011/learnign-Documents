@@ -2,7 +2,7 @@ from pytube import YouTube
 
 with open(file='Dl_files.txt', mode='r') as f:
     for url in f.readlines():
-        # print(url)
+        print(url)
 
         yt = YouTube(url)
         file_name = yt.streams.first().default_filename

@@ -4,3 +4,5 @@ AI Programming Nano degree/Pytorch Training/Untitled1.ipynb
 Udacity NLP /input.txt
 
 *.csv
+# remove env data
+/coding/Python/Fifa_World_Cup_twillo_bot/env

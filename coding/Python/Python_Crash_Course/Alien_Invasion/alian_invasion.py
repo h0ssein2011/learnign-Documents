@@ -1,14 +1,15 @@
 import sys
 import pygame
+from setting import Settings
 
 class Alien_invasion:
     def __init__(self):
         """ iniatise the game """
         pygame.init()
-        self.screen = pygame.display.set_mode((1200,800))
+        self.settings = Settings()
+        self.screen = pygame.display.set_mode((self.settings.screen_with,self.settings.screen_height))
         pygame.display.set_caption("Alien Invasion")
         #set background color
-        self.bg_color = (230,230,230)
     
     def run_game(self):
         while True:
@@ -17,7 +18,7 @@ class Alien_invasion:
                     sys.exit()
                     print('game has finished')
             # redraw the screeen during pass through the loop
-            self.screen.fill(self.bg_color)
+            self.screen.fill(self.settings.bg_color)
             # Make the most recently drawn screen visible.
             pygame.display.flip()
 

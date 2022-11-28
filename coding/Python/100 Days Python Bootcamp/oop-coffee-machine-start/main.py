@@ -6,6 +6,7 @@ MENU = {
     "espresso": {
         "ingredients": {
             "water": 50,
+            "milk": 150,
             "coffee": 18,
         },
         "cost": 1.5,
@@ -34,10 +35,28 @@ resources = {
     "coffee": 100,
 }
 
+profit = 0
 Machine_is_on = True
+
+def sufficent_resource(choice,item):
+    if  resources[item] < MENU[choice]['ingredients'][item]:
+            print('Sorry there is not enough water.')
+            return False
+    return True
+    
 
 while Machine_is_on :
     choice = input('What would you like? (espresso/latte/cappuccino): ​')
     if choice == 'off':
         Machine_is_on = False
-    print(choice)
+    elif choice == 'report':
+        print(resources['water'],'ml')
+        print(resources['milk'],'ml')
+        print(resources['coffee'],'gr')
+        print(profit,'$')
+    else:
+        for item in ['water','milk','coffee']:
+        
+            if sufficent_resource(choice,item):
+                profit += MENU[choice]['cost']
+                

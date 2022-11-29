@@ -7,7 +7,7 @@ MENU = {
         "ingredients": {
             "water": 50,
             "milk": 150,
-            "coffee": 18,
+            "coffee": 18
         },
         "cost": 1.5,
     },
@@ -38,12 +38,20 @@ resources = {
 profit = 0
 Machine_is_on = True
 
-def sufficent_resource(choice,item):
-    if  resources[item] < MENU[choice]['ingredients'][item]:
-            print('Sorry there is not enough water.')
-            return False
+def sufficent_resource(choice):
+    for item in ['water','milk','coffee']:
+        if  resources[item] < MENU[choice]['ingredients'][item]:
+                print(f'Sorry there is not enough {item}.')
+                return False
     return True
-    
+
+def get_coins():
+    input('Please insert coins')
+    total = int(input('How many quaters?')) * 0.25  
+    total += int(input('How many dimes?')) * 0.1   
+    total += int(input('How many nickle?')) * 0.05   
+    total += int(input('How many Pennies?'))  * 0.01
+    return total 
 
 while Machine_is_on :
     choice = input('What would you like? (espresso/latte/cappuccino): ​')
@@ -54,9 +62,24 @@ while Machine_is_on :
         print(resources['milk'],'ml')
         print(resources['coffee'],'gr')
         print(profit,'$')
-    else:
-        for item in ['water','milk','coffee']:
-        
-            if sufficent_resource(choice,item):
+    else:        
+        if sufficent_resource(choice):
+            inserted_coins = get_coins()
+            print(inserted_coins)
+            if MENU[choice]['cost'] <= inserted_coins:
                 profit += MENU[choice]['cost']
+                change = inserted_coins - MENU[choice]['cost']
+                if change > 0 :
+                    print(f'Here is the ${change} in change')
+                for item in ['water','milk','coffee']:
+                    resources[item] -= MENU[choice]['ingredients'][item]
+
+            print(f'Here is your {choice}. Enjoy!') 
+
+
+        else:
+            print("Sorry that's not enough money. Money refunded")
+        
+
+
                 

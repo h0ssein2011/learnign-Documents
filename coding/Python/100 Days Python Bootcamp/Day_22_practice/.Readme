@@ -1,0 +1,16 @@
+### in this Folder I will develop Pong game 
+#### Requirements:
+#### Objects:
+    - Screen -- done
+    - Paddles -- done
+    - Ball -- done
+    - scoreboard
+#### Modules:
+    - Paddles(lef$ Rights) move top and down -- done
+    - Ball movement to the left and right -- done
+    - Ball collision with top and bottom -- done
+    - Ball collision with paddles -- done
+    - Bounce ball after collision -- done
+    - increase score for each player --done
+    - reset ball location after missing paddles -- done
+

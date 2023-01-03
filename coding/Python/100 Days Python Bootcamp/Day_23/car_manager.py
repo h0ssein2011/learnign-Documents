@@ -15,3 +15,13 @@ class CarManager(Turtle):
         self.shapesize(stretch_wid=1, stretch_len=3)
         self.color(random.choice(COLORS))
         self.penup()
+        self.setheading(-180)
+        self.x = random.randint(280,300)
+        self.y = random.randint(-300,300)
+        self.goto(self.x, self.y)
+        self.move_speed = 0.1
+        
+
+    def move_car(self):
+        self.forward(STARTING_MOVE_DISTANCE)
+        

@@ -1,0 +1,14 @@
+** requirements for Snake game development
+*** Objects required:
+-  Screen
+-  Snake
+- ball
+- Scroreboard
+
+Method required:
+- Screen update
+- Snake movement to 4 differnt directions
+- Ball creation randomly in the screen
+- Snake collision detection with ball and walls
+- calculate score
+- udpate screboard

@@ -8,5 +8,14 @@
         #Hint3: THis method will help you: https://www.w3schools.com/python/ref_string_strip.asp
 
 with open('Input/Letters/starting_letter.txt','r') as f:
-    f = f.readlines()
-print(f)
+    raw_text = f.readlines()
+
+with open('Input/Names/invited_names.txt','r') as f:
+    invited_names = f.readlines()
+
+
+for name in invited_names:
+    for text in raw_text:
+        text = text.replace('[name]',name.strip())
+        with open(f'Output/{name}.txt','a') as f:
+            f.write(text + "\n")

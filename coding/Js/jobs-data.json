@@ -1,0 +1,20 @@
+[
+    {
+        "job_title": "Software Developer",
+        "location": "New York, NY",
+        "description": "We are looking for an experienced software developer to join our team. The ideal candidate will have experience with JavaScript, React, and Node.js.",
+        "apply_url": "https://example.com/apply/software-developer"
+    },
+    {
+        "job_title": "Product Manager",
+        "location": "San Francisco, CA",
+        "description": "We are looking for a talented product manager to lead the development of our next generation products. The ideal candidate will have experience with agile development and user research.",
+        "apply_url": "https://example.com/apply/product-manager"
+    },
+    {
+        "job_title": "Marketing Specialist",
+        "location": "Los Angeles, CA",
+        "description": "We are looking for a marketing specialist to drive our online marketing efforts. The ideal candidate will have experience with social media advertising and email marketing.",
+        "apply_url": "https://example.com/apply/marketing-specialist"
+    }
+]

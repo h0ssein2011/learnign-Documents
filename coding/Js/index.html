@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board</title>
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <body>
+    <header>
+      <h1>Job Board</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+        <div id="filters">
+            <label>Job Filter:</label>
+            <select id="job-filter">
+              <option value="all">All</option>
+              <option value="software-developer">Software Developer</option>
+              <option value="product-manager">Product Manager</option>
+              <option value="marketing-specialist">Marketing Specialist</option>
+            </select>
+            <label>Location Filter:</label>
+            <select id="location-filter">
+              <option value="all">All</option>
+              <option value="new-york">New York</option>
+              <option value="san-francisco">San Francisco</option>
+              <option value="los-angeles">Los Angeles</option>
+            </select>
+          </div>
+          
+          <section id="job-listings">
+            <h2>Job Listings</h2>
+            <div class="job-listing" data-job-title="software-developer" data-job-location="new-york">
+              <h3 class="job-title">Software Developer</h3>
+              <div class="job-details">
+                <span class="job-location">New York, NY</span>
+                <p class="job-description">We are looking for an experienced software developer to join our team. The ideal candidate will have experience with JavaScript, React, and Node.js.</p>
+                <a href="#" class="apply-button">Apply Now</a>
+              </div>
+            </div>
+            <div class="job-listing" data-job-title="product-manager" data-job-location="san-francisco">
+              <h3 class="job-title">Product Manager</h3>
+              <div class="job-details">
+                <span class="job-location">San Francisco, CA</span>
+                <p class="job-description">We are looking for a talented product manager to lead the development of our next generation products. The ideal candidate will have experience with agile development and user research.</p>
+                <a href="#" class="apply-button">Apply Now</a>
+              </div>
+            </div>
+          </section>
+
+    </main>
+    <footer>
+      <p>Copyright © 2021 Job Board</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -20,12 +20,13 @@ turtle.shape(img)
 us_states = pd.read_csv('./50_states.csv')
 right_answers =[]
 
+
 for i in range(len(us_states)):
-    answer = screen.textinput(title=f"Guess the state {i+1}/50 " , prompt="what is the another state name?")
-    answer = answer.lower().strip()
-    state_list = us_states['state'].str.lower().tolist()
+    answer = screen.textinput(title=f"Guess the state {i+1}/50 " , prompt="what is the another state name?").title()
+    state_list = us_states['state'].tolist()
     if answer in right_answers:
         print('You said it before')
+    
     elif answer in state_list:
         idx = state_list.index(answer) 
         x_cor = us_states.loc[idx,'x']
@@ -39,9 +40,19 @@ for i in range(len(us_states)):
         text_turtle.goto(x_cor,y_cor)
         text_turtle.write(answer)
         # text_turtle.hideturtle()
+    elif answer =='Exit':
+        missed_states =[state for state in us_states['state'].tolist() if state not in right_answers]
+        with open('missed_states.csv', 'a') as f:
+            for state in missed_states:
+                f.write(state)
+                f.write('\n')
+
+        break
     else :
         print(f'{answer} is not a U.S states')
         pass
 
 
-screen.exitonclick()
+
+
+

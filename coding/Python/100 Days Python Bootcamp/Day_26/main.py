@@ -12,3 +12,9 @@ common_nums = [x for x in f1 if x in f2]
 print(f1)
 print(f2)
 print(common_nums)
+
+word ="what is the airspedd velocity of an unladen Swallow?"
+word_list = word.split()
+
+word_count_dict ={w:len(w) for w in word_list}
+print(word_count_dict)

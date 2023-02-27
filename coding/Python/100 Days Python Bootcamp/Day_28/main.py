@@ -17,11 +17,17 @@ TICK = '✓'
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 
+
+def count_down(count):
+    window.after(1000,count_down,count -1 )
+
+count_down(5)
 # ---------------------------- UI SETUP ------------------------------- #
 
 window = Tk()
 window.title('Pomodoro')
 window.config(padx=100, pady=20,bg=YELLOW)
+
 
 
 #add image

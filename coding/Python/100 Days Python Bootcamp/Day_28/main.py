@@ -7,17 +7,26 @@ RED = "#e7305b"
 GREEN = "#9bdeac"
 YELLOW = "#f7f5dd"
 FONT_NAME = "Courier"
-WORK_MIN = 1
+WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 15
 TICK = '✓'
 reps = 0
 counter_zero = False
+timer = None
 
 # ---------------------------- TIMER RESET ------------------------------- # 
+def reset_timer():
+    window.after_cancel(timer)
+    canvas.itemconfig(timer_text,text="00:00")
+    title_label.config(title_label,text='Timer',fg=RED) 
+    check_marks.config(text = "")
+    global reps
+    reps = 0
+
 
     
-# ---------------------------- TIMER MECHANISM ------------------------------- # 
+# ---------------------------- TIMER ME CHANISM ------------------------------- # 
 def start_timer():
     global reps
     reps += 1
@@ -28,34 +37,32 @@ def start_timer():
 
     if reps % 2 == 0:
         count_down(short_break_sec) 
-        canvas.itemconfig(label_text,text='Short break',fg=RED)   
+        title_label.config(title_label,text='Short',fg=RED)   
     elif reps % 8 == 0:
         count_down(long_break_sec)
-        canvas.itemconfig(label_text,text='Long break',fg=PINK) 
+        title_label.config(title_label,text='Long',fg=PINK) 
     else :
         count_down(work_sec)
-        canvas.itemconfig(label_text,text='Working Time',fg=GREEN) 
+        title_label.config(title_label,text='Working',fg=GREEN) 
     
     
-
-    
-
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 
-
 def count_down(count):
+    global reps
     count_min = math.floor(count /  60)
     count_sec = count % 60
     canvas.itemconfig(timer_text,text=f'{count_min:02d}:{count_sec:02d}')
     if count > 0 :
-        window.after(100,count_down,count -1 )
+        global timer
+        timer = window.after(1000,count_down,count -1 )
     else:
         start_timer()
-        check_mark.config(text = TICK)
-
-
-   
-
+        marks = ""
+        work_sessions = math.floor(reps / 2 )
+        for _ in range(work_sessions):
+            marks += TICK
+            check_marks.config(text = marks)
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -64,28 +71,29 @@ window = Tk()
 window.title('Pomodoro')
 window.config(padx=100, pady=20,bg=YELLOW)
 
-
+title_label = Label(text="Timer", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 50))
+title_label.grid(column=1, row=0)
 
 #add image
-canvas = Canvas(width=200, height=255,bg=YELLOW,highlightthickness=0)
+canvas = Canvas(width=290, height=255,bg=YELLOW,highlightthickness=0)
 tomato_img = PhotoImage(file="./tomato.png")
 canvas.create_image(100,112,image=tomato_img )
+
+
 timer_text = canvas.create_text(103,130 , text = "00:00",fill='white' ,font=(FONT_NAME , 35 ,'bold'))
-label_text = canvas.create_text(103,20 , text = "Timer",fill=GREEN ,font=(FONT_NAME , 15 ,'bold'))
+canvas.grid(column=1, row=1)
 
 
 
-check_mark = Label(fg=GREEN , bg= YELLOW)
+start_button = Button(window, text = "Start",bg='white' ,command=start_timer)
+start_button.grid(column=0, row=2)
+
+reset_button = Button(window, text = "Reset",bg='white',command=reset_timer)
+reset_button.grid(column=2, row=2)
 
 
-canvas.pack()
-
-start = Button(window, text = "Start",bg='white' ,command=start_timer)
-finish = Button(window, text = "Finish",bg='white')
-start.pack(side='left')
-finish.pack(side='right')
-
-
+check_marks = Label(fg=GREEN, bg=YELLOW)
+check_marks.grid(column=1, row=3)
 
 
 window.mainloop()

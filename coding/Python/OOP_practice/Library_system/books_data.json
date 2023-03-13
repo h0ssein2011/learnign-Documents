@@ -1,0 +1,94 @@
+[
+    {
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "ISBN": "9780446310789",
+      "publisher": "Grand Central Publishing",
+      "count_pages": 281
+    },
+    {
+      "title": "1984",
+      "author": "George Orwell",
+      "ISBN": "9780451524935",
+      "publisher": "Signet Classics",
+      "count_pages": 328
+    },
+    {
+      "title": "Animal Farm",
+      "author": "George Orwell",
+      "ISBN": "9780451526342",
+      "publisher": "Signet Classics",
+      "count_pages": 144
+    },
+    {
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "ISBN": "9780743273565",
+      "publisher": "Scribner",
+      "count_pages": 180
+    },
+    {
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "ISBN": "9780141439518",
+      "publisher": "Penguin Classics",
+      "count_pages": 480
+    },
+    {
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "ISBN": "9780316769488",
+      "publisher": "Back Bay Books",
+      "count_pages": 288
+    },
+    {
+      "title": "One Hundred Years of Solitude",
+      "author": "Gabriel García Márquez",
+      "ISBN": "9780060883287",
+      "publisher": "Harper Perennial",
+      "count_pages": 417
+    },
+    {
+      "title": "The Picture of Dorian Gray",
+      "author": "Oscar Wilde",
+      "ISBN": "9780486278070",
+      "publisher": "Dover Publications",
+      "count_pages": 176
+    },
+    {
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "ISBN": "9780060850524",
+      "publisher": "Harper Perennial",
+      "count_pages": 288
+    },
+    {
+      "title": "Wuthering Heights",
+      "author": "Emily Bronte",
+      "ISBN": "9780141439556",
+      "publisher": "Penguin Classics",
+      "count_pages": 416
+    },
+    {
+      "title": "The Adventures of Huckleberry Finn",
+      "author": "Mark Twain",
+      "ISBN": "9780486280615",
+      "publisher": "Dover Publications",
+      "count_pages": 224
+    },
+    {
+      "title": "The Old Man and the Sea",
+      "author": "Ernest Hemingway",
+      "ISBN": "9780684801223",
+      "publisher": "Scribner",
+      "count_pages": 128
+    },
+    {
+      "title": "The Grapes of Wrath",
+      "author": "John Steinbeck",
+      "ISBN": "9780143039433",
+      "publisher": "Penguin Classics",
+      "count_pages": 464
+    }
+]
+  

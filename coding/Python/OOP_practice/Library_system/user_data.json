@@ -1,0 +1,52 @@
+[
+    {
+        "name": "John Smith",
+        "email": "john.smith@gmail.com",
+        "list_of_borrowed": ["The Great Gatsby", "To Kill a Mockingbird"]
+    },
+    {
+        "name": "Alice Johnson",
+        "email": "alice.johnson@yahoo.com",
+        "list_of_borrowed": ["Pride and Prejudice", "1984"]
+    },
+    {
+        "name": "Mark Davis",
+        "email": "mark.davis@hotmail.com",
+        "list_of_borrowed": ["The Catcher in the Rye", "Animal Farm"]
+    },
+    {
+        "name": "Emily Lee",
+        "email": "emily.lee@gmail.com",
+        "list_of_borrowed": ["The Hobbit", "Brave New World"]
+    },
+    {
+        "name": "David Chen",
+        "email": "david.chen@yahoo.com",
+        "list_of_borrowed": ["One Hundred Years of Solitude", "Lord of the Flies"]
+    },
+    {
+        "name": "Karen Wilson",
+        "email": "karen.wilson@hotmail.com",
+        "list_of_borrowed": ["The Sun Also Rises", "The Sound and the Fury"]
+    },
+    {
+        "name": "Tom Brown",
+        "email": "tom.brown@gmail.com",
+        "list_of_borrowed": ["Crime and Punishment", "The Brothers Karamazov"]
+    },
+    {
+        "name": "Lucy Kim",
+        "email": "lucy.kim@yahoo.com",
+        "list_of_borrowed": ["Wuthering Heights", "Jane Eyre"]
+    },
+    {
+        "name": "Peter Zhang",
+        "email": "peter.zhang@hotmail.com",
+        "list_of_borrowed": ["Heart of Darkness", "Moby-Dick"]
+    },
+    {
+        "name": "Grace Lee",
+        "email": "grace.lee@gmail.com",
+        "list_of_borrowed": ["Frankenstein", "Dracula"]
+    }
+]

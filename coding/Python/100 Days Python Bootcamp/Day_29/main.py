@@ -1,13 +1,22 @@
+import string
 from tkinter import *
 from tkinter import messagebox
-
-
-
+import random
 
 
 
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
+def generate_password(length = 10):
+    # Define a string of characters to choose from
+    chars = string.ascii_letters + string.digits + string.punctuation
+    
+    # Generate a random password
+    password = ''.join(random.choice(chars) for i in range(length))
+    password_entry.delete(0,END)
+    password_entry.insert(0,string= password)
+    
+    
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
@@ -65,7 +74,7 @@ password_label.grid(column=0, row=3)
 password_entry = Entry(width=21)
 password_entry.grid(column=1, row=3)
 
-gen_pass = Button(window, text = "Generate Password")
+gen_pass = Button(window, text = "Generate Password" ,command=generate_password)
 gen_pass.grid(column=2, row=3)
 
 

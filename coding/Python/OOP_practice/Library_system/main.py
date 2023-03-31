@@ -16,11 +16,9 @@ class Library:
     def add_book(self,title,author,ISBN,publisher,count_pages):
         new_book = Book(title,author,ISBN,publisher,count_pages)
         self.list_of_books.append(new_book)
-        self.number_of_books += 1
     
     def remove_book(self,book):
         self.list_of_books.remove(book)
-        self.number_of_books -= 1
     
     def search_books(self,title):
         title_list = [book.title for book in self.list_of_books]
@@ -30,10 +28,10 @@ class Library:
             print(f'{title} is not in the library')
 
 class User:
-    def __init__(self,name,email,list_of_borrowed):
+    def __init__(self,name,email):
         self.name = name
         self.email = email
-        self.list_of_borrowed = list_of_borrowed 
+        self.list_of_borrowed = [] 
 
     def borrow_book(self,title):
         self.list_of_borrowed.append(title)
@@ -46,37 +44,29 @@ class Admin:
         self.name = name
         self.email = email
         self.password = password
-        self.list_of_users = []
         self.user_names = []
         self.user_emails = []
     
-    def add_book(self,title,author,ISBN,publisher,count_pages):
+    def add_book(self,Library,title,author,ISBN,publisher,count_pages):
         new_book = Book(title,author,ISBN,publisher,count_pages)
-        Library.list_of_books.append(new_book)
-        Library.number_of_books += 1
+        Library.add_book(new_book)
     
-    def remove_book(self,book):
-        Library.list_of_books.remove(book)
-        Library.number_of_books -= 1
     
-    def search_books(self,title):
-        title_list = [book.title for book in Library.list_of_books]
-        if title in title_list:
-            print(f"{title} is Found")
-        else:
-            print(f'{title} is not in the library')
+    def remove_book(self,Library,book):
+        Library.remove_book(book)
+    
+    def search_books(self,Library,title):
+        Library.search_books(title)
     
     def add_user(self,user_name,user_email):
         if user_name not in self.user_names:
             new_user = User(name = user_name,email=user_email)
-            Library.list_of_users.append(new_user)
             self.user_names.append(new_user.name)
             self.user_emails.append(new_user.email)
       
     
     def remove_user(self,user):
         if user.name in self.user_names:
-            Library.list_of_users.remove(user)
             self.user_names.remove(user.name)
             self.user_emails.remove(user.email)
 

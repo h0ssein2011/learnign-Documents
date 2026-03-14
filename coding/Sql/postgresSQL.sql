@@ -230,3 +230,9 @@ select name, revenue from (
 		group by facs.name
 	) as agg where revenue < 1000
 order by revenue;
+
+IF (DATETRUNC('month', [Order Date]))<= (DATETRUNC('month', DATETRUNC('day',max([Order Date])))) 
+ and
+ (DATETRUNC('month', [Order Date]))> (DATETRUNC('month', (DATEADD('month',-12,DATETRUNC('day',max([Order Date]))))))
+THEN true
+END

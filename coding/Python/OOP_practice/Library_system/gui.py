@@ -20,7 +20,7 @@ wc_label.grid(row=1,column=1)
 admin = Admin(name='John Doe', email='johndoe@example.com', password='password')
 
 def add_book_by_admin():
-    title_entry = Entry(window)
+    title_entry = Entry(window,lab)
     title_entry.grid(row=2, column=1)  
     title = title_entry.get()  
     
